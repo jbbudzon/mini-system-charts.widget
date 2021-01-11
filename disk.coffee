@@ -72,11 +72,11 @@ update: (output, el) ->
     width: chartWidth
 
 style: """
-  left: 150px
-  top: 7px
+  left: 150px+165px+14px
+  top: 20px
 
   color: white
-  font: 12px Inconsolata, monospace, Helvetica Neue, sans-serif
+  font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif
   -webkit-font-smoothing: antialiased
 
   .number

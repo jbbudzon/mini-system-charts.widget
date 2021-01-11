@@ -6,10 +6,10 @@ require('./assets/lib/piety')($, document)
 
 ## Colors Used by the chart
 colors =
-  free: 'rgba(0,0,0,0.3)'
-  inactive: 'rgb(100,202,236)'
-  active: 'orange'
-  wired_down: 'rgb(255,44,37)'
+  free: '#1d2021'
+  inactive: '#458588'
+  active: '#fe8019'
+  wired_down: '#cc241d'
 
   ## Another option
   # free: 'rgb(133, 188, 86)'
@@ -52,11 +52,11 @@ update: (output, el) ->
 
 
 style: """
-  left: 75px
-  top: 7px
+  left: 75px+165px+14px
+  top: 20px
 
-  color: white
-  font: 12px Inconsolata, monospace, Helvetica Neue, sans-serif
+  color: #ebdbb2
+  font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif
   -webkit-font-smoothing: antialiased
 
   .number

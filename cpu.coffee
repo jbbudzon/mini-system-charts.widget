@@ -5,10 +5,10 @@ require('./assets/lib/piety')($, document)
 
 ## Colors Used by the chart
 colors =
-  low: 'rgb(133, 188, 86)'
-  med: 'orange'
-  high: 'rgb(255,44,37)'
-  back: 'rgba(0,0,0,0.3)'
+  low: '#689d6a'
+  med: '#fe8019'
+  high: '#cc241d'
+  back: '#1d2021'
 
 ##  Width of the chart
 chartWidth = 15
@@ -18,7 +18,7 @@ chartType = 'donut'
 
 refreshFrequency: 2000 # ms
 
-command: "ESC=`printf \"\e\"`; ps -A -o %cpu | awk '{s+=$1} END {printf(\"%.1f\",s/8);}'"
+command: "ESC=`printf \"\e\"`; ps -A -o %cpu | awk '{s+=$1} END {printf(\"%04.1f\",s/8);}'"
 
 render: (output) ->
   """
@@ -41,7 +41,7 @@ update: (output, el) ->
     fill = colors.high
 
   ## Set Text
-  $(".cpu .number", el).text("  #{cpu}%")
+  $(".cpu .number", el).text("  #{output}%")
 
   ## Set Chart Data
   $(".cpu .chart", el).text("#{cpu}/100").peity chartType,
@@ -50,11 +50,11 @@ update: (output, el) ->
 
 
 style: """
-  left: 10px
-  top: 7px
+  left: 10px+165px+14px
+  top: 20px
 
-  color: white
-  font: 12px Inconsolata, monospace, Helvetica Neue, sans-serif
+  color: #ebdbb2
+  font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif
   -webkit-font-smoothing: antialiased
 
   .number

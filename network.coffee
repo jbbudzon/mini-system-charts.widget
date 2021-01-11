@@ -8,8 +8,8 @@ require('./assets/lib/piety')($, document)
 
 ## Colors of chart
 colors =
-  in: 'rgb(170, 143, 190)'
-  out: 'rgb(100,202,236)'
+  in: '#b16286'
+  out: '#458588'
 
 ## Width of chart
 chartWidth = 40
@@ -88,29 +88,29 @@ update:(output,el) ->
         .text(valuesOut.join(","))
         .change()
 
-      ## Convert to kb instead of bytes
-      dataIn = dataIn / 1000
-      dataOut = dataOut / 1000
-      units = 'kb'
+      # ## Convert to kb instead of bytes
+      # dataIn = dataIn / 1000
+      # dataOut = dataOut / 1000
+      # units = 'kb'
 
-      ## If value is large, convert to megabytes
-      if dataIn > 1000 or dataOut > 1000
-        dataIn /= 1000
-        dataOut /= 1000
-        units = 'mb'
+      # ## If value is large, convert to megabytes
+      # if dataIn > 1000 or dataOut > 1000
+      #   dataIn /= 1000
+      #   dataOut /= 1000
+      #   units = 'mb'
 
-      ## Round to one decimal place
-      dataIn =  Math.round(dataIn * 10)/10
-      dataOut = Math.round(dataOut * 10)/10
+      # ## Round to one decimal place
+      # dataIn =  Math.round(dataIn * 10)/10
+      # dataOut = Math.round(dataOut * 10)/10
 
-      $('.number', el).html "#{dataIn}<span style='color: #{colors.in}'>↓</span> #{dataOut}<span style='color: #{colors.out}'>↑</span> #{units}"
+      # $('.number', el).html "#{dataIn}<span style='color: #{colors.in}'>↓</span> #{dataOut}<span style='color: #{colors.out}'>↑</span> #{units}"
 
 style: """
-  left: 200px
-  top: 7px
+  left: 200px+115px+14px
+  top: 20px
 
-  color: white
-  font: 12px Inconsolata, monospace, Helvetica Neue, sans-serif
+  color: #ebdbb2
+  font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif
   -webkit-font-smoothing: antialiased
 
   div
