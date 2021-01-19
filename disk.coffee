@@ -72,8 +72,8 @@ update: (output, el) ->
     width: chartWidth
 
 style: """
-  left: 150px+165px+14px
-  top: 20px
+  left: 150px+150px
+  top: 12px
 
   color: white
   font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif

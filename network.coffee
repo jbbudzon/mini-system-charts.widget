@@ -106,8 +106,8 @@ update:(output,el) ->
       # $('.number', el).html "#{dataIn}<span style='color: #{colors.in}'>↓</span> #{dataOut}<span style='color: #{colors.out}'>↑</span> #{units}"
 
 style: """
-  left: 200px+115px+14px
-  top: 20px
+  right: 240px
+  top: 12px
 
   color: #ebdbb2
   font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif

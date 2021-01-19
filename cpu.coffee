@@ -50,8 +50,8 @@ update: (output, el) ->
 
 
 style: """
-  left: 10px+165px+14px
-  top: 20px
+  right: 150px+370px
+  top: 12px
 
   color: #ebdbb2
   font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif
