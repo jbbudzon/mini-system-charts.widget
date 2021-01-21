@@ -14,7 +14,7 @@ foundPaths="${whereCat///cat}:${whereAwk///awk}:${whereNetstat///netstat}"
 ####
 function getnetwork(){
   export PATH="$foundPaths" &&
-  netstat -iw 1 | head -n3 | tail -n1 | awk '{print $3 " " $6}' > "$1/network.db" &
+  netstat -iw 1 | /usr/bin/head -n3 | /usr/bin/tail -n1 | awk '{print $3 " " $6}' > "$1/network.db" &
   process=$!
   sleep 1.5
   pkill -P $process
