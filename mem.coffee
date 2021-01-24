@@ -43,7 +43,7 @@ update: (output, el) ->
     mem[key] = Number(value)
 
   ## Set text to free + inactive
-  $(".mem .number", el).text("  #{mem.free + mem.inactive}mb")
+  # $(".mem .number", el).text("  #{mem.free + mem.inactive}mb")
 
   ## Display active, free, and inactive on the chart
   $(".mem .chart", el).text("#{mem.wired_down},#{mem.active},#{mem.inactive},#{mem.free}").peity chartType,

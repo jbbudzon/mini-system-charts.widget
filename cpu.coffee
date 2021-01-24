@@ -41,7 +41,7 @@ update: (output, el) ->
     fill = colors.high
 
   ## Set Text
-  $(".cpu .number", el).text("  #{output}%")
+  # $(".cpu .number", el).text("  #{output}%")
 
   ## Set Chart Data
   $(".cpu .chart", el).text("#{cpu}/100").peity chartType,
@@ -50,8 +50,8 @@ update: (output, el) ->
 
 
 style: """
-  right: 150px+370px
-  top: 12px
+  right: 100px+370px
+  top: 13px
 
   color: #ebdbb2
   font: 12px Hack Nerd Font, monospace, Helvetica Neue, sans-serif
